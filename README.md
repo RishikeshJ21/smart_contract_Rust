@@ -1,5 +1,5 @@
 # smart_contract_Rust
-# Message Canister
+
 
 This is a simple message canister that allows you to perform various operations such as adding, updating, deleting, and retrieving messages. The canister utilizes in-memory storage and provides error handling for managing messages.
 
