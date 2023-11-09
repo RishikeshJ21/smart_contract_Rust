@@ -1,4 +1,32 @@
-# icp_rust_message_board_contract
+# smart_contract_Rust
+# Message Canister
+
+This is a simple message canister that allows you to perform various operations such as adding, updating, deleting, and retrieving messages. The canister utilizes in-memory storage and provides error handling for managing messages.
+
+## Functionality
+
+The canister provides the following functionality:
+
+- Add a new message
+- Update an existing message
+- Delete a message by ID
+- Retrieve a message by ID
+
+## Usage
+
+The canister exposes the following methods:
+
+### Add a New Message
+
+```rust
+let message_payload = MessagePayload {
+    title: "Example Title".to_string(),
+    body: "Example Body".to_string(),
+    attachment_url: "https://example.com".to_string(),
+};
+
+let new_message = add_message(message_payload).unwrap();
+println!("Added Message: {:?}", new_message);
 
 ### Requirements
 * rustc 1.64 or higher
@@ -83,3 +111,22 @@ $ dfx start --background
 # Deploys your canisters to the replica and generates your candid interface
 $ dfx deploy
 ```
+# Command-line Tests for Message Canister
+
+This project provides a set of command-line tests to verify the functionality of the message canister in Rust. The tests cover adding, updating, deleting, and retrieving messages, along with error cases where messages do not exist or other errors occur during execution.
+
+#test Cases
+
+1. Create a new Rust project using Cargo.
+2. Add the canister code to the project.
+3. Create a `tests` directory in the project root.
+4. Inside the `tests` directory, create a file named `integration_test.rs`.
+5. Add the provided content from `integration_test.rs` to your test file.
+
+## Running Tests
+
+To run the tests, execute the following command in the terminal at the root of your project directory:
+
+```bash
+cargo test
+
